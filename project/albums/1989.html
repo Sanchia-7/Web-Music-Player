@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sanify<3</title>
+        <link rel="icon" type="image/x-icon" href="C:\Users\dell\Desktop\Sanchia\images\favicon.ico">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="C:\Users\dell\Desktop\Sanchia\project\albums\style_sp.css">
+        <script src="https://kit.fontawesome.com/8751abb40d.js" crossorigin="anonymous"></script>
+    </head>
+    <body style="background-image: url(https://64.media.tumblr.com/154b549f9d677dbc5659ca26c3d60d6e/f5df508e2c3710b0-47/s1280x1920/487005ba5802372c8c24b08a31dc815067b525ad.jpg);">
+        <header class="header">
+            <nav class="navibar">
+                <i class="fa-brands fa-napster" style="margin-right: 1060px; color: white; "></i>
+                <a href="C:\Users\dell\Desktop\Sanchia\project\san_player.html">Home</a>
+                <a href="C:\Users\dell\Desktop\Sanchia\project\About.html">About</a>
+                <a href="#contact">Contact</a>
+                <div class="dropdown">
+                  <a><span class="hover-effect" style="cursor: pointer;"><i class="fa-solid fa-magnifying-glass" style="font-size: 15px;"></i></span></a>
+                  <div class="dropdown-content">
+                    <fieldset><a href="#" style="padding: 0%;"></a><input type="search" placeholder="search" style="width: 82%;">
+                      <i class="fa-solid fa-magnifying-glass" style="padding: 0; font-size: 12px !important;"></i></a>
+                    </fieldset>
+                </div>
+                </div>
+                <div class="dropdown">
+                <a><span class="hover-effect" style="cursor: pointer;">Hello Sanchia</span></a>
+                  <div class="dropdown-content">
+                      <a href="#profile">Profile</a>
+                      <a href="#settings">Settings</a>
+                      <a href="C:\Users\dell\Desktop\Sanchia\project\login.html">Logout</a>
+                  </div>
+                </div>
+            </nav>
+        </header>
+        <div class="row">
+            <div class="column side">
+                <div id="mySidebar" class="sidebar">
+                    <div class="navigation">
+                        <ul style="list-style: none; font-size: 20px;">
+                          <li>
+                            <a href="#">
+                              <span class="fa fas fa-book"></span>
+                              <span>Your Library</span>
+                            </a>
+                          </li>
+    
+                          <li>
+                            <a href="#">
+                              <span class="fa fas fa-plus-square"></span>
+                              <span>Create Playlist</span>
+                            </a>
+                          </li>
+                
+                          <li>
+                            <a href="#">
+                              <span class="fa fas fa-heart"></span>
+                              <span>Liked Songs</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="details">
+                        <div class="now-playing">PLAYING x OF y</div>
+                        <div class="track-art"></div>
+                        <div class="track-name">Track Name</div>
+                        <div class="track-artist">Track Artist</div>
+                      </div>
+                      
+                      <div class="buttons">
+                        <div class="prev-track" onclick="prevTrack()">
+                          <i class="fa fa-step-backward fa-2x"></i>
+                        </div>
+                        <div class="playpause-track" onclick="playpauseTrack()">
+                          <i class="fa fa-play-circle fa-4x"></i>
+                        </div>
+                        <div class="next-track" onclick="nextTrack()">
+                          <i class="fa fa-step-forward fa-2x"></i>
+                        </div>
+                      </div>
+                      
+                      <div class="slider_container">
+                        <div class="current-time">00:00</div>
+                        <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()" style="width: 800px;">
+                        <div class="total-duration">00:00</div>
+                      </div>
+                      
+                      
+                      <div class="slider_container">
+                        <i class="fa fa-volume-down"></i>
+                        <input type="range" min="1" max="100"
+                          value="99" class="volume_slider" onchange="setVolume()">
+                        <i class="fa fa-volume-up"></i>
+                      </div>
+                    </div>      
+                  </div>           
+                  
+            <div class="column middle" id="tracklist">
+                <div class="songlist">
+                    <br><br>
+                        <div class="songItem" >
+                            <img src="https://64.media.tumblr.com/154b549f9d677dbc5659ca26c3d60d6e/f5df508e2c3710b0-47/s1280x1920/487005ba5802372c8c24b08a31dc815067b525ad.jpg" alt="1">
+                            <span>Blank Space </span>
+                            <span class="songlistplay"><span class="timestamp">03:57 <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br> Nice to meet you, where you been?<br>I could show you incredible things <br> Magic, madness, heaven, sin<br> Saw you there and I thought<br> Oh, my God,<br> look at that face<br> You look like my next mistake <br>Loves a game, wanna play? <br>Ay<br> New money, suit and tie <br>I can read you like a magazine <br>Aint it funny?<br> Rumors fly And I know you heard about me<br> So hey, lets be friends<br> Im dying to see how this one ends <br>Grab your passport and my hand <br>I can make the bad guys good for a weekend<br><br> So its gonna be forever <br>Or its gonna go down in flames <br>You can tell me when its over, mm <br>If the high was worth the pain <br>Got a long list of ex-lovers <br>Theyll tell you Im insane<br> Cause you know I love the players <br>And you love the game <br><br>Cause were young, and were reckless<br> Well take this way too far Itll leave you breathless, mm <br>Or with a nasty scar <br>Got a long list of ex-lovers <br>Theyll tell you Im insane <br>But Ive got a blank space, baby <br>And Ill write your name <br><br>Cherry lips, crystal skies <br>I could show you incredible things <br>Stolen kisses, pretty lies <br>Youre the King, baby, Im your Queen<br> Find out what you want<br> Be that girl for a month<br> Wait, the worst is yet to come,<br> oh, no <br>Screaming, crying, perfect storms <br>I can make all the tables turn<br> Rose garden filled with thorns <br>Keep you second guessing like <br>Oh, my God,<br> who is she?<br> I get drunk on jealousy <br>But youll come back each time you leave <br>Cause, darling, Im a nightmare dressed like a daydream<br><br> So its gonna be forever <br>Or its gonna go down in flames <br>You can tell me when its over, mm<br> If the high was worth the pain <br>Got a long list of ex-lovers <br>Theyll tell you Im insane <br>Cause you know I love the players <br>And you love the game <br>Cause were young, and were reckless<br> (oh) <br>Well take this way too far <br>Itll leave you breathless, mm (oh) <br>Or with a nasty scar <br>Got a long list of ex-lovers <br>Theyll tell you Im insane (insane)<br> But Ive got a blank space, baby <br>And Ill write your name <br><br>Boys only want love if its torture <br>Dont say I didnt, say I didnt warn ya<br> Boys only want love if its torture<br> Dont say I didnt, say I didnt warn ya <br><br>So its gonna be forever <br>Or its gonna go down in flames <br>You can tell me when its over (over) <br>If the high was worth the pain <br>Got a long list of ex-lovers <br>Theyll tell you Im insane (Im insane) <br>Cause you know I love the players <br>And you love the game <br>Cause were young, and were reckless<br> Well take this way too far (ooh)<br> Itll leave you breathless, mm <br>Or with a nasty scar (leave a nasty scar) <br>Got a long list of ex-lovers <br>Theyll tell you Im insane <br>But Ive got a blank space, baby <br>And Ill write your name<br>')"></i>
+                                    <audio id="a1"><source src="C:\Users\dell\Desktop\Sanchia\project\audios\1989\1.mp3" type="audio/mpeg"></audio>
+                            </span></span>
+                            
+                        </div>
+
+                        <div class="songItem" >
+                            <img src="https://64.media.tumblr.com/154b549f9d677dbc5659ca26c3d60d6e/f5df508e2c3710b0-47/s1280x1920/487005ba5802372c8c24b08a31dc815067b525ad.jpg" alt="1">
+                            <span>Welcome To New York </span>
+                            <span class="songlistplay"><span class="timestamp">03:38   <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS: <br><br>Walkin through a crowd, the village is aglow <br>Kaleidoscope of loud heartbeats under coats <br><br>Everybody here wanted somethin more <br>Searchin for a sound we hadnt heard before <br><br>And it said <br>Welcome to New York, its been waitin for you <br>Welcome to New York, welcome to New York <br>Welcome to New York, its been waitin for you <br>Welcome to New York, welcome to New York <br>Its a new soundtrack, I could dance to this beat, beat forevermore <br>The lights are so bright, but they never blind me, me <br>Welcome to New York, its been waitin for you <br>Welcome to New York, welcome to New York <br><br>When we first dropped our bags on apartment floors <br>Took our broken hearts, put them in a drawer <br><br>Everybody here was someone else before <br>And you can want who you want <br>Boys and boys and girls and girls <br><br>Welcome to New York, its been waitin for you <br>Welcome to New York, welcome to New York <br>Welcome to New York, its been waitin for you <br>Welcome to New York, welcome to New York <br>Its a new soundtrack, I could dance to this beat, beat forevermore <br>The lights are so bright, but they never blind me, me <br>Welcome to New York (New York), its been waitin for you <br>Welcome to New York, welcome to New York <br><br>Like any great love, it keeps you guessing <br>Like any real love, its ever-changing <br>Like any true love, it drives you crazy <br>But you know you wouldnt change anything, anything, anything <br><br>Welcome to New York, its been waitin for you <br>Welcome to New York, welcome to New York <br>Welcome to New York, its been waitin for you <br>Welcome to New York, welcome to New York <br>Its a new soundtrack, I could dance to this beat <br>The lights are so bright, but they never blind me <br>Welcome to New York (new soundtrack), its been waitin for you <br>Welcome to New York (the lights are so bright but they never blind me) <br>Welcome to New York (so bright, they never blind me) <br>Welcome to New York <br>Welcome to New York')"></i>
+                            <audio id="a2">
+                            <source src="C:\Users\dell\Desktop\Sanchia\project\audios\1989\2.mp3" type="audio/mpeg">
+                            </audio>
+                        </span></span>
+                         
+                        </div>
+                        <div class="songItem" >
+                            <img src="https://64.media.tumblr.com/154b549f9d677dbc5659ca26c3d60d6e/f5df508e2c3710b0-47/s1280x1920/487005ba5802372c8c24b08a31dc815067b525ad.jpg" alt="1" >
+                            <span>Out Of The Woods </span>
+                            <span class="songlistplay"><span class="timestamp">04:02   <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>Looking at it now<br>  It all seems so simple<br>  We were lying on your couch<br>  I remember<br>  You took a Polaroid of us<br>  Then discovered (then discovered)<br>  The rest of the world was black and white<br>  But we were in screaming color<br>  And I remember thinking<br>  <br>  Are we out of the woods yet? Are we out of the woods yet?<br>  Are we out of the woods yet? Are we out of the woods?<br>  Are we in the clear yet? Are we in the clear yet?<br>  Are we in the clear yet? In the clear yet, good<br>  <br>  Are we out of the woods yet? Are we out of the woods yet?<br>  Are we out of the woods yet? Are we out of the woods?<br>  Are we in the clear yet? Are we in the clear yet?<br>  Are we in the clear yet? In the clear yet, good<br>  <br>  Are we out of the woods<br>  <br>  Looking at it now<br>  Last December (last December)<br>  We were built to fall apart<br>  Then fall back together (back together)<br>  Ooh your necklace hanging from my neck<br>  The night we couldnt quite forget<br>  When we decided (we decided) to move the furniture so we could dance<br>  Baby, like we stood a chance<br>  Two paper airplanes flying, flying, flying<br>  And I remember thinking<br>  <br>  Are we out of the woods yet? Are we out of the woods yet?<br>  Are we out of the woods yet? Are we out of the woods?<br>  Are we in the clear yet? Are we in the clear yet?<br>  Are we in the clear yet? In the clear yet, good<br>  <br>  Are we out of the woods yet? Are we out of the woods yet?<br>  Are we out of the woods yet? Are we out of the woods?<br>  Are we in the clear yet? Are we in the clear yet?<br>  Are we in the clear yet? In the clear yet, good<br>  <br>  Are we out of the woods?<br>  <br>  Remember when you hit the brakes too soon<br>  Twenty stitches in a hospital room<br>  When you started crying baby, I did too<br>  But when the sun came up I was looking at you<br>  Remember when we couldnt take the heat<br>  I walked out, I said, Im setting you free<br>  But the monsters turned out to be just trees<br>  When the sun came up you were looking at me<br>  <br>  You were looking at me<br>  Oh!<br>  You were looking at me<br>  <br>  Are we out of the woods yet? Are we out of the woods yet?<br>  Are we out of the woods yet? Are we out of the woods? (I remember)<br>  Are we in the clear yet? Are we in the clear yet?<br>  Are we in the clear yet? Are we in the clear yet? (Oh, I remember)<br>  <br>  Are we out of the woods yet? Are we out of the woods yet?<br>  Are we out of the woods yet? Are we out of the woods?<br>  Are we in the clear yet? Are we in the clear yet?<br>  Are we in the clear yet? In the clear yet, good<br>  <br>  Are we out of the woods yet? Are we out of the woods yet?<br>  Are we out of the woods yet? Are we out of the woods?<br>  Are we in the clear yet? Are we in the clear yet?<br>  Are we in the clear yet? In the clear yet, good<br>  <br>  Are we out of the woods yet? Are we out of the woods yet?<br>  Are we out of the woods yet? Are we out of the woods?<br>  Are we in the clear yet? Are we in the clear yet?<br>  Are we in the clear yet? In the clear yet, good<br>  <br>  Are we out of the woods yet? Are we out of the woods yet?<br>  Are we out of the woods yet? Are we out of the woods?<br>  Are we in the clear yet? Are we in the clear yet?<br>  Are we in the clear yet? In the clear yet, good')"></i>
+                            <source src="C:\Users\dell\Desktop\Sanchia\project\audios\1989\3.mp3" type="audio/mpeg">
+                            </audio>
+                        </span></span>
+                        
+                        </div>
+                        <div class="songItem" >
+                            <img src="https://64.media.tumblr.com/154b549f9d677dbc5659ca26c3d60d6e/f5df508e2c3710b0-47/s1280x1920/487005ba5802372c8c24b08a31dc815067b525ad.jpg" alt="1" >
+                            <span>This Love </span>
+                            <span class="songlistplay"><span class="timestamp">04:10   <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>Clear blue water<br>High tide, came and brought you in<br>And I could go on and on, on and on<br>And I will, skies grow darker, currents swept you out again<br>And you were just gone and gone, gone and gone<br>In silent screams, and wildest dreams<br>I never dreamed of this<br>This love is good<br>This love is bad<br>This love is a life back from the dead, oh<br>These hands had to let it go free<br>And this love came back to me, oh<br>Oh, oh<br>Tossing, turning, struggle through the night for someone new<br>And I could go on and on, on and on<br>Lanterns burning, flickered in the mind only you<br>But you were still gone, gone, gone<br>Been losing grip, on sinking ships<br>You showed up, just in time<br>This love is good<br>This love is bad<br>This love is a life back from the dead, oh<br>These hands had to let it go free<br>And this love came back to me, oh<br>This love left a permanent mark<br>This love is glowing in the dark, oh<br>These hands had to let it go free<br>And this love came back to me, oh<br>This love, this love, this love, this love (Oh)<br>This love, this love, this love, this love (Oh)<br>This love, this love, this love, this love (Oh)<br>This love, this love, this love, this love<br>Your kiss, my cheek<br>I watched you leave<br>Your smile, my ghost<br>I fell to my knees<br>When youre young, just to run<br>But you come back to what you need<br>This love is good<br>This love is bad<br>This love is a life back from the dead, oh<br>These hands had to let it go free<br>And, this love came back to me, oh<br>(This love) This love thats a permanent mark<br>(This love) This love is glowing in the dark, oh<br>(This love) These hands had to let it go free<br>(This love) And this love came back to me, oh<br>This love, this love, this love, this love (Oh)<br>This love, this love, this love, this love (Oh)<br>This love, this love, this love, this love (Oh)<br>This love, this love, this love, this love (This love came back to me, oh)')"></i>
+                            <source src="C:\Users\dell\Desktop\Sanchia\project\audios\1989\4.mp3" type="audio/mpeg">
+                            </audio>
+                        </span></span>
+                        
+                        </div>
+                        <div class="songItem" >
+                            <img src="https://64.media.tumblr.com/154b549f9d677dbc5659ca26c3d60d6e/f5df508e2c3710b0-47/s1280x1920/487005ba5802372c8c24b08a31dc815067b525ad.jpg" alt="1" >
+                            <span>Style </span>
+                            <span class="songlistplay"><span class="timestamp">03:56  <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>Midnight, you come and pick me up, no headlights <br>Long drive, could end in burning flames or paradise <br>Fade into view, oh, <br>Its been a while since I have even heard from you <br>(Heard from you) <br>And I should just tell you to leave cause I <br>Know exactly where it leads but I <br>Watch it go round and round each time <br> <br>You got that James Dean daydream look in your eye <br>And I got that red lip, classic thing that you like <br>And when we go crashing down, we come back every time <br>Cause we never go out of style, we never go out of style <br>Youve got that long hair slick back, white t-shirt <br>And I got that good girl faith and a tight little skirt <br>And when we go crashing down, we come back every time <br>Cause we never go out of style, we never go out of style <br> <br>So it goes, he cant keep his wild eyes on the road <br>Takes me home, lights are off hes taking off his coat (Hm yeah) <br>I say Ive heard that youve been out and about with some other girl, some other girl <br>He says What youve heard is true but I <br>Cant stop thinking about you and I <br>I said Ive been there too a few times <br> <br>Cause you got that James Dean daydream look in your eye <br>And I got that red lip, classic thing that you like <br>And when we go crashing down, we come back every time <br>Cause we never go out of style, we never go out of style <br>Youve got that long hair slick back, white t-shirt <br>And I got that good girl faith and a tight little skirt (A tight little skirt) <br>And when we go crashing down, we come back every time <br>Cause we never go (We never go) out of style, we never go out of style <br> <br>Take me home <br>Just take me home <br>Yeah just take me home, oh <br> <br>(Out of style) You got that James Dean daydream look in your eye <br>And I got that red lip, classic thing that you like <br>And when we go crashing down, we come back every time <br>Cause we never go out of style, we never go out of style')"></i>
+                            <source src="C:\Users\dell\Desktop\Sanchia\project\audios\1989\5.mp3" type="audio/mpeg">
+                            </audio>
+                        </span></span>
+                        
+                        </div>
+                        <div class="songItem" >
+                            <img src="https://64.media.tumblr.com/154b549f9d677dbc5659ca26c3d60d6e/f5df508e2c3710b0-47/s1280x1920/487005ba5802372c8c24b08a31dc815067b525ad.jpg" alt="1">
+                            <span>Bad Blood </span>
+                            <span class="songlistplay"><span class="timestamp">03:37   <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>Cause baby now we got bad blood <br>You know it used to be mad love <br>So take a look at what youve done <br>Cause baby now we got bad blood <br> <br>(Hey) now we got problems <br>And I dont think we can solve them <br>You made a really deep cut <br>And baby now we got bad blood <br> <br>(Hey) did you have to do this? <br>I was thinking that you could be trusted <br>Did you have to ruin what was shining, now its all rusted <br>Did you have to hit me, where Im weak? baby I couldnt breathe <br>And rubbed it in so deep <br>Salt in the wound like youre laughing right at me <br>Oh, its so sad to think about the good times <br>You and I <br> <br>Cause baby now we got bad blood <br>You know it used to be mad love <br>So take a look at what youve done <br>Cause baby now we got bad blood <br> <br>(Hey) now we got problems <br>And I dont think we can solve them <br>You made a really deep cut <br>And baby now we got bad blood <br> <br>(Hey!) did you think wed be fine? <br>Still got scars on my back from your knife <br>So dont think its in the past <br>These kind of wounds they last and they last <br>Now did you think it all through? <br>All these things will catch up to you <br>And time can heal but this wont <br>So if youre coming my way, just dont <br>Oh, its so sad to think about the good times <br>You and I <br> <br>Cause baby now we got bad blood <br>You know it used to be mad love <br>So take a look at what youve done <br>Cause baby now we got bad blood <br> <br>(Hey) now we got problems <br>And I dont think we can solve them <br>You made a really deep cut <br>And baby now we got bad blood <br> <br>(Hey!) band-aids dont fix bullet holes <br>You say sorry just for show <br>If you live like that, you live with ghosts (ghosts) <br>Band-aids dont fix bullet holes (hey!) <br>You say sorry just for show (hey!) <br>If you live like that, you live with ghosts (hey!) <br>Hm, if you love like that blood runs cold! <br> <br>Cause baby now we got bad blood <br>You know it used to be mad love! (mad love) <br>So take a look at what youve done <br>Cause baby now we got bad blood! (bad blood) <br> <br>(Hey) now we got problems <br>And I dont think we can solve them (think we can solve them) <br>You made a really deep cut <br>And baby now we got bad blood <br> <br>(Cause now we got bad blood) cause baby now we got bad blood <br>You know it used to be mad love <br>So take a look at what youve done (look at what youve done) <br>Cause baby now we got bad blood (woah) <br>Now we got problems <br>And I dont think we can solve them <br>You made a really deep cut <br>And baby now we got bad blood (hey!)')"></i>
+                            <audio id="a6">
+                            <source src="C:\Users\dell\Desktop\Sanchia\project\audios\1989\6.mp3" type="audio/mpeg">
+                            </audio>
+                        </span></span>
+                        
+                        </div>
+                        <div class="songItem" >
+                            <img src="https://64.media.tumblr.com/154b549f9d677dbc5659ca26c3d60d6e/f5df508e2c3710b0-47/s1280x1920/487005ba5802372c8c24b08a31dc815067b525ad.jpg" alt="1"  >
+                            <span>Wildest Dreams </span> 
+                            <span class="songlistplay"><span class="timestamp">03:46   <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>He said, Lets get out of this town <br>Drive out of the city <br>Away from the crowds <br>I thought heaven cant help me now <br>Nothing lasts forever <br>But this is gonna take me down <br>Hes so tall, and handsome as hell <br>Hes so bad but he does it so well <br>I can see the end as it begins, my one condition is <br> <br>Say youll remember me <br>Standing in a nice dress, staring at the sunset babe <br>Red lips and rosy cheeks <br>Say youll see me again even if its just in your wildest dreams (ah ah) <br>Wildest dreams (ah ah) <br> <br>I said no one has to know what we do <br>His hands are in my hair, his clothes are in my room <br>And his voice is a familiar sound, nothing lasts forever <br>But this is getting good now <br>Hes so tall, and handsome as hell <br>Hes so bad but he does it so well <br>And when weve had our very last kiss <br>But my last request is <br> <br>Say youll remember me <br>Standing in a nice dress, staring at the sunset babe <br>Red lips and rosy cheeks <br>Say youll see me again even if its just in your wildest dreams (ah ah) (ah ah) <br>Wildest dreams (ah ah) <br> <br>You see me in hindsight <br>Tangled up with you all night <br>Burn it down <br>Some day when you leave me <br>I bet these memories follow you around <br>You see me in hindsight <br>Tangled up with you all night <br>Burnin it down (burnin it down) <br>Some day when you leave me <br>I bet these memories follow you around (follow you around) <br> <br>Say youll remember me <br>Standing in a nice dress, staring at the sunset babe <br>Red lips and rosy cheeks <br>Say youll see me again even if its just pretend <br> <br>Say youll remember me <br>Standing in a nice dress, staring at the sunset babe <br>Red lips and rosy cheeks <br>Say youll see me again even if its just (just pretend, just pretend) in your wildest dreams (ah ah) <br>In your wildest dreams (ah ah) <br>Even if its just in your wildest dreams (ah ah) <br>In your wildest dreams (ah ah)')"></i>
+                            <source src="C:\Users\dell\Desktop\Sanchia\project\audios\1989\7.mp3" type="audio/mpeg">
+                            </audio>
+                        </span></span>
+                         
+                        </div> 
+                        <div class="songItem" > 
+                            <img src="https://64.media.tumblr.com/154b549f9d677dbc5659ca26c3d60d6e/f5df508e2c3710b0-47/s1280x1920/487005ba5802372c8c24b08a31dc815067b525ad.jpg" alt="1"  >
+                            <span>New Romantics </span> 
+                            <span class="songlistplay"><span class="timestamp">03:56  <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>Were all bored <br>Were all so tired of everything <br>We wait for <br>Trains that just arent coming <br>We show off <br>Our different scarlet letters <br>Trust me, mine is better <br> <br>Were so young <br>But were on the road to ruin <br>We play dumb <br>But we know exactly what were doing <br>We cry tears <br>Of mascara in the bathroom <br>Honey, life is just a classroom <br> <br>Cause, baby, I could build a castle <br>Out of all the bricks they threw at me <br>And every day is like a battle <br>But every night with us is like a dream <br> <br>Baby, were the new romantics <br>Come on, come along with me <br>Heart break is the national anthem <br>We sing it proudly <br>We are too busy dancing <br>So get knocked off our feet <br>Baby, were the new romantics <br>The best people in life are free <br> <br>Were all here <br>the lights and boys are blinding <br>We hang back <br>Its all in the timing <br>Its poker <br>He cant see it in my face <br>But Im about to play my Ace <br> <br>We need love <br>But all we want is danger <br>We team up <br>Then switch sides like a record changer <br>The rumors <br>Are terrible and cruel <br>But, honey most of them are true <br> <br>Cause, baby, I could build a castle <br>Out of all the bricks they threw at me <br>And every day is like a battle <br>But every night with us is like a dream <br> <br>Baby, were the new romantics <br>Come on, come along with me <br>Heart break is the national anthem <br>We sing it proudly <br>We are too busy dancing <br>To get knocked off our feet <br>Baby, were the new romantics <br>The best people in life are free <br> <br>So come on, come along with me <br>The best people in life are free <br> <br>Please take my hand and <br>Please take me dancing and <br>Please leave me stranded, its so romantic (its so romantic) <br> <br>Cause, baby, I could build a castle <br>Out of all the bricks they threw at me <br>And every day is like a battle <br>But every night with us is like a dream <br> <br>Cause, baby, I could build a castle <br>Out of all the bricks they threw at me <br>And every day is like a battle <br>But every night with us is like a dream <br> <br>Baby, were the new romantics <br>Come on, come along with me <br>Heart break is the national anthem <br>We sing it proudly <br>We are too busy dancing <br>To get knocked off our feet <br>Baby, were the new romantics <br>The best people in life are free')"></i>
+                            <audio id="a8">
+                            <source src="C:\Users\dell\Desktop\Sanchia\project\audios\1989\8.mp3" type="audio/mpeg">
+                            </audio>
+                        </span></span>
+                         
+                        </div> 
+                        <div class="songItem" > 
+                            <img src="https://64.media.tumblr.com/154b549f9d677dbc5659ca26c3d60d6e/f5df508e2c3710b0-47/s1280x1920/487005ba5802372c8c24b08a31dc815067b525ad.jpg" alt="1"  >
+                            <span>You Are In Love </span> 
+                            <span class="songlistplay"><span class="timestamp">04:33   <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>One look, dark room <br>Men just for you <br>Time moved too fast <br>You played it back <br>Buttons on a coat <br>Light hearted joke <br>No proof not much <br>But you saw enough <br>Small talk, he drives <br>Coffee at midnight, the light reflects <br>The chain on your neck <br>He says look up <br>And your shoulders brush <br>No proof, one touch <br>You felt enough <br> <br>You can hear it in the silence, silence, you <br>You can feel it on the way home, way home, you <br>You can see it with the lights out, lights out <br>You are in love, true love <br>You are in love <br> <br>Morning, his place <br>Burnt toast, Sunday <br>You keep his shirt <br>He keeps his word <br>And for once you let go <br>Of your fears and your ghosts <br>One step, not much, but it said enough <br>You kissed on sidewalks <br>You fight and you talk <br>One night he wakes, strange look on his face <br>Pauses, then says, youre my best friend <br>And you knew what it was, he is in love <br> <br>You can hear it in the silence, silence, you <br>You can feel it on the way home, way home, you <br>You can see it with the lights out, lights out <br>You are in love, true love <br> <br>So it goes <br>You two are dancing in a snow globe, go round and round <br>And he keeps the picture of you in his office downtown <br>You understand now why they lost their minds and fought the wars <br>And why Ive spent my whole life try to put it into words <br> <br>Cause you can hear in the silence <br>You can feel it on the way home <br>You can see it with the lights out <br>You are in love, true love <br>Youre in love <br> <br>You can hear it in the silence, silence, you <br>You can feel it on the way home, way home, you <br>You can see it with the lights out, lights out <br>You are in love, true love <br>Youre in love <br>You can hear it in the silence, silence, you <br>You can feel it on the way home, way home, you <br>You can see it with the lights out, lights out <br>You are in love, true love <br>Youre in love')"></i>
+                            <audio id="a9">
+                            <source src="C:\Users\dell\Desktop\Sanchia\project\audios\1989\9.mp3" type="audio/mpeg">
+                            </audio>
+                        </span></span>
+                         
+                        </div> 
+                        <div class="songItem" > 
+                            <img src="https://64.media.tumblr.com/154b549f9d677dbc5659ca26c3d60d6e/f5df508e2c3710b0-47/s1280x1920/487005ba5802372c8c24b08a31dc815067b525ad.jpg" alt="1"  >
+                            <span>Clean </span> 
+                            <span class="songlistplay"><span class="timestamp">04:37   <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>The drought was the very worst, ah ah <br>When the flowers that wed grown together died of thirst <br>It was months, and months of back and forth, ah ah <br>Youre still all over me like a wine-stained dress I cant wear anymore <br>Hung my head, as I lost the war, and the sky turned black like a perfect storm <br> <br>Rain came pouring down when I was drowning <br>Thats when I could finally breathe <br>And by morning, gone was any trace of you, I think I am finally clean <br> <br>There was nothing left to do, ah ah <br>When the butterflies turned to dust, they covered my whole room <br>So I punched a hole in the roof, ah ah <br>Let the flood carry away all my pictures of you <br>The water filled my lungs, I screamed so loud but no one heard a thing <br> <br>Rain came pouring down when I was drowning <br>Thats when I could finally breathe <br>And by morning, gone was any trace of you, I think I am finally clean <br>I think I am finally clean, ah <br>Said, I think I am finally clean, ah <br> <br>Ten months sober, I must admit <br>Just because youre clean dont mean you dont miss it <br>Ten months older I wont give in <br>Now that Im clean Im never gonna risk it <br> <br>The drought was the very worst, ah ah <br>When the flowers that wed grown together died of thirst <br> <br>Rain came pouring down when I was drowning <br>Thats when I could finally breathe <br>And by morning, gone was any trace of you, I think I am finally clean <br>Rain came pouring down when I was drowning <br>Thats when I could finally breathe <br>And by morning, gone was any trace of you, I think I am finally clean <br>Finally clean, think Im finally clean, ah ah <br>Think Im finally clean')"></i>
+                            <audio id="a10">
+                            <source src="C:\Users\dell\Desktop\Sanchia\project\audios\1989\10.mp3" type="audio/mpeg">
+                            </audio>
+                        </span></span>
+                        </div> </div>  </div>            
+                        
+            <div class="column side">
+                    <div class="rightbar" id="right-column" style="overflow-y: auto; text-align: center;">
+                        <div class="card" >
+                            <h2 style="text-align:center;color: blanchedalmond;"><img src="https://hips.hearstapps.com/hmg-prod/images/where-to-watch-stream-taylor-swift-eras-tour-movie-65302fa84c4f8.jpeg?crop=0.337xw:0.505xh;0.311xw,0.138xh&resize=640:*" width="160ox">Taylor Swift</h2>
+                            <p>Taylor Swift, an American singer-songwriter, is a global icon known for her versatile music spanning country to pop. With numerous awards, she's recognized for heartfelt lyrics, captivating melodies, and an influential presence in the music industry. Swift's career showcases artistic evolution and cultural impact.</p>
+                        </div> 
+                    </div>                   
+            </div>  
+        </div>
+        <script>
+          function changeRightColumnContent(content) {
+            document.getElementById('right-column').innerHTML = content;
+          }
+        </script>
+        <script>
+          let now_playing = document.querySelector(".now-playing");
+          let track_art = document.querySelector(".track-art");
+          let track_name = document.querySelector(".track-name");
+          let track_artist = document.querySelector(".track-artist");
+
+          let playpause_btn = document.querySelector(".playpause-track");
+          let next_btn = document.querySelector(".next-track");
+          let prev_btn = document.querySelector(".prev-track");
+
+          let seek_slider = document.querySelector(".seek_slider");
+          let volume_slider = document.querySelector(".volume_slider");
+          let curr_time = document.querySelector(".current-time");
+          let total_duration = document.querySelector(".total-duration");
+
+          let track_index = 0;
+          let isPlaying = false;
+          let updateTimer;
+
+          // Create new audio element
+          let curr_track = document.createElement('audio');
+          console.log("fhh")
+          // Define the tracks that have to be played
+          let track_list = [
+            {
+              name: "Blank Space",
+              artist: "Taylor Swift",
+              image: "https://64.media.tumblr.com/154b549f9d677dbc5659ca26c3d60d6e/f5df508e2c3710b0-47/s1280x1920/487005ba5802372c8c24b08a31dc815067b525ad.jpg",
+              path: "C:\\Users\\dell\\Desktop\\Sanchia\\project\\audios\\1989\\1.mp3"
+            },
+            {
+              name: "Welcome To New York",
+              artist: "Taylor Swift",
+              image: "https://64.media.tumblr.com/154b549f9d677dbc5659ca26c3d60d6e/f5df508e2c3710b0-47/s1280x1920/487005ba5802372c8c24b08a31dc815067b525ad.jpg",
+              path: "C:\\Users\\dell\\Desktop\\Sanchia\\project\\audios\\1989\\2.mp3"
+            },
+            {
+              name: "Out of the Woods",
+              artist: "Taylor Swift",
+              image: "https://64.media.tumblr.com/154b549f9d677dbc5659ca26c3d60d6e/f5df508e2c3710b0-47/s1280x1920/487005ba5802372c8c24b08a31dc815067b525ad.jpg",
+              path: "C:\\Users\\dell\\Desktop\\Sanchia\\project\\audios\\1989\\3.mp3",
+            },
+            {
+              name: "This Love",
+              artist: "Taylor Swift",
+              image: "https://64.media.tumblr.com/154b549f9d677dbc5659ca26c3d60d6e/f5df508e2c3710b0-47/s1280x1920/487005ba5802372c8c24b08a31dc815067b525ad.jpg",
+              path: "C:\\Users\\dell\\Desktop\\Sanchia\\project\\audios\\1989\\4.mp3",
+            },
+            {
+              name: "Style",
+              artist: "Taylor Swift",
+              image: "https://64.media.tumblr.com/154b549f9d677dbc5659ca26c3d60d6e/f5df508e2c3710b0-47/s1280x1920/487005ba5802372c8c24b08a31dc815067b525ad.jpg",
+              path: "C:\\Users\\dell\\Desktop\\Sanchia\\project\\audios\\1989\\5.mp3",
+            },
+            {
+              name: "Bad Blood",
+              artist: "Taylor Swift",
+              image: "https://64.media.tumblr.com/154b549f9d677dbc5659ca26c3d60d6e/f5df508e2c3710b0-47/s1280x1920/487005ba5802372c8c24b08a31dc815067b525ad.jpg",
+              path: "C:\\Users\\dell\\Desktop\\Sanchia\\project\\audios\\1989\\6.mp3",
+            },
+            {
+              name: "Wildest Dream",
+              artist: "Taylor Swift",
+              image: "https://64.media.tumblr.com/154b549f9d677dbc5659ca26c3d60d6e/f5df508e2c3710b0-47/s1280x1920/487005ba5802372c8c24b08a31dc815067b525ad.jpg",
+              path: "C:\\Users\\dell\\Desktop\\Sanchia\\project\\audios\\1989\\7.mp3",
+            },
+            {
+              name: "New Romantics",
+              artist: "Taylor Swift",
+              image: "https://64.media.tumblr.com/154b549f9d677dbc5659ca26c3d60d6e/f5df508e2c3710b0-47/s1280x1920/487005ba5802372c8c24b08a31dc815067b525ad.jpg",
+              path: "C:\\Users\\dell\\Desktop\\Sanchia\\project\\audios\\1989\\8.mp3",
+            },
+            {
+              name: "You Are In Love",
+              artist: "Taylor Swift",
+              image: "https://64.media.tumblr.com/154b549f9d677dbc5659ca26c3d60d6e/f5df508e2c3710b0-47/s1280x1920/487005ba5802372c8c24b08a31dc815067b525ad.jpg",
+              path: "C:\\Users\\dell\\Desktop\\Sanchia\\project\\audios\\1989\\9.mp3",
+            },
+            
+            {
+              name: "Clean",
+              artist: "Taylor Swift",
+              image: "https://64.media.tumblr.com/154b549f9d677dbc5659ca26c3d60d6e/f5df508e2c3710b0-47/s1280x1920/487005ba5802372c8c24b08a31dc815067b525ad.jpg",
+              path: "C:\\Users\\dell\\Desktop\\Sanchia\\project\\audios\\1989\\10.mp3",
+            },
+          ];
+
+          function loadTrack(track_index) {
+            clearInterval(updateTimer);
+            resetValues();
+            curr_track.src = track_list[track_index].path;
+            curr_track.load();
+
+            track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
+            track_name.textContent = track_list[track_index].name;
+            track_artist.textContent = track_list[track_index].artist;
+            now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
+
+            updateTimer = setInterval(seekUpdate, 1000);
+            curr_track.addEventListener("ended", nextTrack);
+          }
+
+          function resetValues() {
+            curr_time.textContent = "00:00";
+            total_duration.textContent = "00:00";
+            seek_slider.value = 0;
+          }
+
+          // Load the first track in the tracklist
+          loadTrack(track_index);
+
+          function playpauseTrack() {
+            if (!isPlaying) playTrack();
+            else pauseTrack();
+          }
+
+          function playTrack() {
+            curr_track.play();
+            isPlaying = true;
+            playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-4x"></i>';
+          }
+
+          function pauseTrack() {
+            curr_track.pause();
+            isPlaying = false;
+            playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-4x"></i>';;
+          }
+
+          function nextTrack() {
+            if (track_index < track_list.length - 1)
+              track_index += 1;
+            else track_index = 0;
+            loadTrack(track_index);
+            playTrack();
+          }
+
+          function prevTrack() {
+            if (track_index > 0)
+              track_index -= 1;
+            else track_index = track_list.length;
+            loadTrack(track_index);
+            playTrack();
+          }
+
+          function seekTo() {
+            let seekto = curr_track.duration * (seek_slider.value / 100);
+            curr_track.currentTime = seekto;
+          }
+
+          function setVolume() {
+            curr_track.volume = volume_slider.value / 100;
+          }
+
+          function seekUpdate() {
+            let seekPosition = 0;
+
+            if (!isNaN(curr_track.duration)) {
+              seekPosition = curr_track.currentTime * (100 / curr_track.duration);
+
+              seek_slider.value = seekPosition;
+
+              let currentMinutes = Math.floor(curr_track.currentTime / 60);
+              let currentSeconds = Math.floor(curr_track.currentTime - currentMinutes * 60);
+              let durationMinutes = Math.floor(curr_track.duration / 60);
+              let durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
+
+              if (currentSeconds < 10) { currentSeconds = "0" + currentSeconds; }
+              if (durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
+              if (currentMinutes < 10) { currentMinutes = "0" + currentMinutes; }
+              if (durationMinutes < 10) { durationMinutes = "0" + durationMinutes; }
+
+              curr_time.textContent = currentMinutes + ":" + currentSeconds;
+              total_duration.textContent = durationMinutes + ":" + durationSeconds;
+            }
+          }
+         </script>
+</body>
+</html>
+
+
+
+
+
+

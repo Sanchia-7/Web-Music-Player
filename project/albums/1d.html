@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sanify<3</title>
+        <link rel="icon" type="image/x-icon" href="C:\Users\dell\Desktop\Sanchia\images\favicon.ico">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="C:\Users\dell\Desktop\Sanchia\project\albums\style_sp.css">
+        <script src="https://kit.fontawesome.com/8751abb40d.js" crossorigin="anonymous"></script>
+    </head>
+    <body style="background-image: url(https://e1.pxfuel.com/desktop-wallpaper/877/495/desktop-wallpaper-one-direction-grew-up-right-before-our-very-eyes-see-the-5-album-covers-one-direction-album.jpg);">
+        <header class="header">
+            <nav class="navibar">                  
+                <i class="fa-brands fa-napster" style="margin-right: 1060px; color: white; "></i>
+                <a href="C:\Users\dell\Desktop\Sanchia\project\san_player.html">Home</a>
+                <a href="C:\Users\dell\Desktop\Sanchia\project\About.html">About</a>
+                <a href="#contact">Contact</a>
+                <div class="dropdown">
+                  <a><span class="hover-effect" style="cursor: pointer;"><i class="fa-solid fa-magnifying-glass" style="font-size: 15px;"></i></span></a>
+                  <div class="dropdown-content">
+                    <fieldset><a href="#" style="padding: 0%;"></a><input type="search" placeholder="search" style="width: 82%;">
+                      <i class="fa-solid fa-magnifying-glass" style="padding: 0; font-size: 12px !important;"></i></a>
+                    </fieldset>
+                </div>
+                </div>
+                <div class="dropdown">
+                <a><span class="hover-effect" style="cursor: pointer;">Hello Sanchia</span></a>
+                  <div class="dropdown-content">
+                      <a href="#profile">Profile</a>
+                      <a href="#settings">Settings</a>
+                      <a href="C:\Users\dell\Desktop\Sanchia\project\login.html">Logout</a>
+                  </div>
+                </div>
+            </nav>
+        </header>
+        
+        <div class="row">
+            <div class="column side">
+                <div id="mySidebar" class="sidebar">         
+                  <div class="navigation">
+                    <ul style="list-style: none; font-size: 20px;">
+                      <li>
+                        <a href="#">
+                          <span class="fa fas fa-book"></span>
+                          <span>Your Library</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#">
+                          <span class="fa fas fa-plus-square"></span>
+                          <span>Create Playlist</span>
+                        </a>
+                      </li>
+            
+                      <li>
+                        <a href="#">
+                          <span class="fa fas fa-heart"></span>
+                          <span>Liked Songs</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="details">
+                    <div class="now-playing">PLAYING x OF y</div>
+                    <div class="track-art"></div>
+                    <div class="track-name">Track Name</div>
+                    <div class="track-artist">Track Artist</div>
+                  </div>
+                  
+                  <div class="buttons">
+                    <div class="prev-track" onclick="prevTrack()">
+                      <i class="fa fa-step-backward fa-2x"></i>
+                    </div>
+                    <div class="playpause-track" onclick="playpauseTrack()">
+                      <i class="fa fa-play-circle fa-4x"></i>
+                    </div>
+                    <div class="next-track" onclick="nextTrack()">
+                      <i class="fa fa-step-forward fa-2x"></i>
+                    </div>
+                  </div>
+                  
+                  <div class="slider_container">
+                    <div class="current-time">00:00</div>
+                    <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()" style="width: 800px;">
+                    <div class="total-duration">00:00</div>
+                  </div>
+                  
+                  
+                  <div class="slider_container">
+                    <i class="fa fa-volume-down"></i>
+                    <input type="range" min="1" max="100"
+                      value="99" class="volume_slider" onchange="setVolume()">
+                    <i class="fa fa-volume-up"></i>
+                  </div>
+                </div>      
+              </div>
+            
+            <div class="column middle">
+                <div class="songlist">
+                    <br><br>
+                        <div class="songItem" >
+                            <img src="https://e1.pxfuel.com/desktop-wallpaper/877/495/desktop-wallpaper-one-direction-grew-up-right-before-our-very-eyes-see-the-5-album-covers-one-direction-album.jpg" alt="1">
+                            <span> Track 1</span>
+                            <span class="songlistplay"><span class="timestamp">03:03  <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>')"></i></span></span>
+                        </div>
+                        <div class="songItem" >
+                          <img src="https://e1.pxfuel.com/desktop-wallpaper/877/495/desktop-wallpaper-one-direction-grew-up-right-before-our-very-eyes-see-the-5-album-covers-one-direction-album.jpg" alt="1">
+                          <span> Track 2</span>
+                          <span class="songlistplay"><span class="timestamp">04:11  <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>')"></i></span></span>
+                      </div>
+                      <div class="songItem" >
+                        <img src="https://e1.pxfuel.com/desktop-wallpaper/877/495/desktop-wallpaper-one-direction-grew-up-right-before-our-very-eyes-see-the-5-album-covers-one-direction-album.jpg" alt="1">
+                        <span> Track 3</span>
+                        <span class="songlistplay"><span class="timestamp">03:23  <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>')"></i></span></span>
+                    </div>
+                    <div class="songItem" >
+                      <img src="https://e1.pxfuel.com/desktop-wallpaper/877/495/desktop-wallpaper-one-direction-grew-up-right-before-our-very-eyes-see-the-5-album-covers-one-direction-album.jpg" alt="1">
+                      <span> Track 4 </span>
+                      <span class="songlistplay"><span class="timestamp">03:40  <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>')"></i></span></span>
+                  </div>
+                  <div class="songItem" >
+                    <img src="https://e1.pxfuel.com/desktop-wallpaper/877/495/desktop-wallpaper-one-direction-grew-up-right-before-our-very-eyes-see-the-5-album-covers-one-direction-album.jpg" alt="1">
+                    <span> Track 5</span>
+                    <span class="songlistplay"><span class="timestamp">02:41  <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>')"></i></span></span>
+                  </div>
+                  <div class="songItem" >
+                    <img src="https://e1.pxfuel.com/desktop-wallpaper/877/495/desktop-wallpaper-one-direction-grew-up-right-before-our-very-eyes-see-the-5-album-covers-one-direction-album.jpg" alt="1">
+                    <span> Track 6</span>
+                    <span class="songlistplay"><span class="timestamp">03:59  <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>')"></i></span></span>
+                  </div>
+                  <div class="songItem" >
+                      <img src="https://e1.pxfuel.com/desktop-wallpaper/877/495/desktop-wallpaper-one-direction-grew-up-right-before-our-very-eyes-see-the-5-album-covers-one-direction-album.jpg" alt="1">
+                      <span> Track 7</span>
+                      <span class="songlistplay"><span class="timestamp">02:20  <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>')"></i></span></span>
+                  </div>
+                  <div class="songItem" >
+                      <img src="https://e1.pxfuel.com/desktop-wallpaper/877/495/desktop-wallpaper-one-direction-grew-up-right-before-our-very-eyes-see-the-5-album-covers-one-direction-album.jpg" alt="1">
+                      <span> Track 8 </span>
+                      <span class="songlistplay"><span class="timestamp">03:47  <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>')"></i></span></span>
+                  </div>
+                  <div class="songItem" >
+                    <img src="https://e1.pxfuel.com/desktop-wallpaper/877/495/desktop-wallpaper-one-direction-grew-up-right-before-our-very-eyes-see-the-5-album-covers-one-direction-album.jpg" alt="1">
+                    <span> Track 9</span>
+                    <span class="songlistplay"><span class="timestamp">04:50  <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>')"></i></span></span>
+                  </div>
+                  <div class="songItem" >
+                    <img src="https://e1.pxfuel.com/desktop-wallpaper/877/495/desktop-wallpaper-one-direction-grew-up-right-before-our-very-eyes-see-the-5-album-covers-one-direction-album.jpg" alt="1">
+                    <span> Track 10</span>
+                    <span class="songlistplay"><span class="timestamp">03:00  <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>')"></i></span></span>
+                  </div>       
+                </div>
+              </div>
+
+
+            <div class="column side">
+                <div class="rightbar" id="right-column" style="overflow-y: auto; text-align: center;"> 
+                  <div class="card">
+                    <h2 style="text-align:center;color: blanchedalmond;"><img src="https://i1.sndcdn.com/artworks-0mxAyiDL3GUZfKQz-YfllPQ-t500x500.jpg" width="160px">One Direction</h2>
+                    <p>One Direction, a British-Irish boy band formed in 2010, gained global fame with their pop anthems and energetic performances. Comprising Harry Styles, Niall Horan, Louis Tomlinson, Liam Payne, and formerly Zayn Malik, they became a cultural phenomenon. Their chart-topping hits, like "What Makes You Beautiful," solidified their status as pop music icons.</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+          <script>
+            function changeRightColumnContent(content) {
+              document.getElementById('right-column').innerHTML = content;
+            }
+          </script>
+          <script>
+            let now_playing = document.querySelector(".now-playing");
+            let track_art = document.querySelector(".track-art");
+            let track_name = document.querySelector(".track-name");
+            let track_artist = document.querySelector(".track-artist");
+  
+            let playpause_btn = document.querySelector(".playpause-track");
+            let next_btn = document.querySelector(".next-track");
+            let prev_btn = document.querySelector(".prev-track");
+  
+            let seek_slider = document.querySelector(".seek_slider");
+            let volume_slider = document.querySelector(".volume_slider");
+            let curr_time = document.querySelector(".current-time");
+            let total_duration = document.querySelector(".total-duration");
+  
+            let track_index = 0;
+            let isPlaying = false;
+            let updateTimer;
+  
+            // Create new audio element
+            let curr_track = document.createElement('audio');
+            console.log("fhh")
+            // Define the tracks that have to be played
+            let track_list = [
+              {
+                name: "Track 1",
+                artist: "One direction",
+                image: " https://e1.pxfuel.com/desktop-wallpaper/877/495/desktop-wallpaper-one-direction-grew-up-right-before-our-very-eyes-see-the-5-album-covers-one-direction-album.jpg ",
+                path: "  1.mp3"
+              },
+              {
+                name: "Track 2",
+                artist: "One Direction",
+                image: " https://e1.pxfuel.com/desktop-wallpaper/877/495/desktop-wallpaper-one-direction-grew-up-right-before-our-very-eyes-see-the-5-album-covers-one-direction-album.jpg ",
+                path: "  2.mp3"
+              },
+              {
+                name: "Track 3",
+                artist: "One Direction",
+                image: " https://e1.pxfuel.com/desktop-wallpaper/877/495/desktop-wallpaper-one-direction-grew-up-right-before-our-very-eyes-see-the-5-album-covers-one-direction-album.jpg ",
+                path: "  3.mp3"
+              },
+              {
+                name: "Track 4",
+                artist: "One Direction",
+                image: " https://e1.pxfuel.com/desktop-wallpaper/877/495/desktop-wallpaper-one-direction-grew-up-right-before-our-very-eyes-see-the-5-album-covers-one-direction-album.jpg ",
+                path: " 4.mp3"
+              },
+              {
+                name: "Track 5",
+                artist: "One Direction",
+                image: " https://e1.pxfuel.com/desktop-wallpaper/877/495/desktop-wallpaper-one-direction-grew-up-right-before-our-very-eyes-see-the-5-album-covers-one-direction-album.jpg ",
+                path: "  5.mp3"
+              },
+              {
+                name: "Track 6",
+                artist: "One Direction",
+                image: " https://e1.pxfuel.com/desktop-wallpaper/877/495/desktop-wallpaper-one-direction-grew-up-right-before-our-very-eyes-see-the-5-album-covers-one-direction-album.jpg ",
+                path: "  6.mp3"
+              },
+              {
+                name: "Track 7",
+                artist: "One Direction",
+                image: " https://e1.pxfuel.com/desktop-wallpaper/877/495/desktop-wallpaper-one-direction-grew-up-right-before-our-very-eyes-see-the-5-album-covers-one-direction-album.jpg ",
+                path: "  6.mp3"
+              },
+              {
+                name: "Track 8",
+                artist: "One Direction",
+                image: " https://e1.pxfuel.com/desktop-wallpaper/877/495/desktop-wallpaper-one-direction-grew-up-right-before-our-very-eyes-see-the-5-album-covers-one-direction-album.jpg ",
+                path: "  6.mp3"
+              },
+              {
+                name: "Track 9",
+                artist: "One Direction",
+                image: " https://e1.pxfuel.com/desktop-wallpaper/877/495/desktop-wallpaper-one-direction-grew-up-right-before-our-very-eyes-see-the-5-album-covers-one-direction-album.jpg ",
+                path: "  6.mp3"
+              },
+              {
+                name: "Track 10",
+                artist: "One Direction",
+                image: " https://e1.pxfuel.com/desktop-wallpaper/877/495/desktop-wallpaper-one-direction-grew-up-right-before-our-very-eyes-see-the-5-album-covers-one-direction-album.jpg ",
+                path: "  6.mp3"
+              },
+              ];
+  
+            function loadTrack(track_index) {
+              clearInterval(updateTimer);
+              resetValues();
+              curr_track.src = track_list[track_index].path;
+              curr_track.load();
+  
+              track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
+              track_name.textContent = track_list[track_index].name;
+              track_artist.textContent = track_list[track_index].artist;
+              now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
+  
+              updateTimer = setInterval(seekUpdate, 1000);
+              curr_track.addEventListener("ended", nextTrack);
+            }
+  
+            function resetValues() {
+              curr_time.textContent = "00:00";
+              total_duration.textContent = "00:00";
+              seek_slider.value = 0;
+            }
+  
+            // Load the first track in the tracklist
+            loadTrack(track_index);
+  
+            function playpauseTrack() {
+              if (!isPlaying) playTrack();
+              else pauseTrack();
+            }
+  
+            function playTrack() {
+              curr_track.play();
+              isPlaying = true;
+              playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-4x"></i>';
+            }
+  
+            function pauseTrack() {
+              curr_track.pause();
+              isPlaying = false;
+              playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-4x"></i>';;
+            }
+  
+            function nextTrack() {
+              if (track_index < track_list.length - 1)
+                track_index += 1;
+              else track_index = 0;
+              loadTrack(track_index);
+              playTrack();
+            }
+  
+            function prevTrack() {
+              if (track_index > 0)
+                track_index -= 1;
+              else track_index = track_list.length;
+              loadTrack(track_index);
+              playTrack();
+            }
+  
+            function seekTo() {
+              let seekto = curr_track.duration * (seek_slider.value / 100);
+              curr_track.currentTime = seekto;
+            }
+  
+            function setVolume() {
+              curr_track.volume = volume_slider.value / 100;
+            }
+  
+            function seekUpdate() {
+              let seekPosition = 0;
+  
+              if (!isNaN(curr_track.duration)) {
+                seekPosition = curr_track.currentTime * (100 / curr_track.duration);
+  
+                seek_slider.value = seekPosition;
+  
+                let currentMinutes = Math.floor(curr_track.currentTime / 60);
+                let currentSeconds = Math.floor(curr_track.currentTime - currentMinutes * 60);
+                let durationMinutes = Math.floor(curr_track.duration / 60);
+                let durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
+  
+                if (currentSeconds < 10) { currentSeconds = "0" + currentSeconds; }
+                if (durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
+                if (currentMinutes < 10) { currentMinutes = "0" + currentMinutes; }
+                if (durationMinutes < 10) { durationMinutes = "0" + durationMinutes; }
+  
+                curr_time.textContent = currentMinutes + ":" + currentSeconds;
+                total_duration.textContent = durationMinutes + ":" + durationSeconds;
+              }
+            }
+           </script>
+</body>
+</html>

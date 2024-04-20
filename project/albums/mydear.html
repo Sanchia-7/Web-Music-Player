@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sanify<3</title>
+        <link rel="icon" type="image/x-icon" href="C:\Users\dell\Desktop\Sanchia\images\favicon.ico">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="C:\Users\dell\Desktop\Sanchia\project\albums\style_sp.css">
+        <script src="https://kit.fontawesome.com/8751abb40d.js" crossorigin="anonymous"></script>
+    </head>
+    <body style="background: url(https://www.levelman.com/content/images/2023/07/theweeknd_mydearmelanchoy_d2cs.jpg); background-size: contain;">
+        <header class="header">
+            <nav class="navibar">                  
+                <i class="fa-brands fa-napster" style="margin-right: 1060px; color: white; "></i>
+                <a href="C:\Users\dell\Desktop\Sanchia\project\san_player.html">Home</a>
+                <a href="C:\Users\dell\Desktop\Sanchia\project\About.html">About</a>
+                <a href="#contact">Contact</a>
+
+                <div class="dropdown">
+                  <a><span class="hover-effect" style="cursor: pointer;"><i class="fa-solid fa-magnifying-glass" style="font-size: 15px;"></i></span></a>
+                  <div class="dropdown-content">
+                    <fieldset><a href="#" style="padding: 0%;"></a><input type="search" placeholder="search" style="width: 82%;">
+                      <i class="fa-solid fa-magnifying-glass" style="padding: 0; font-size: 12px !important;"></i></a>
+                    </fieldset>
+                </div>
+                </div>
+                <div class="dropdown">
+                <a><span class="hover-effect" style="cursor: pointer;">Hello Sanchia</span></a>
+                  <div class="dropdown-content">
+                      <a href="#profile">Profile</a>
+                      <a href="#settings">Settings</a>
+                      <a href="C:\Users\dell\Desktop\Sanchia\project\login.html">Logout</a>
+                  </div>
+                </div>
+            </nav>
+        </header>
+        <div class="row">
+            <div class="column side">
+                <div id="mySidebar" class="sidebar">
+                    <div class="navigation">
+                        <ul style="list-style: none; font-size: 20px;">
+                          <li>
+                            <a href="#">
+                              <span class="fa fas fa-book"></span><span>Your Library</span></a>
+                          </li>
+    
+                          <li>
+                            <a href="#">
+                              <span class="fa fas fa-plus-square"></span><span>Create Playlist</span></a>
+                          </li>
+                
+                          <li>
+                            <a href="#">
+                              <span class="fa fas fa-heart"></span><span>Liked Songs</span></a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="details">
+                        <div class="now-playing">PLAYING x OF y</div>
+                        <div class="track-art"></div>
+                        <div class="track-name">Track Name</div>
+                        <div class="track-artist">Track Artist</div>
+                      </div>
+                      
+                      <div class="buttons">
+                        <div class="prev-track" onclick="prevTrack()">
+                          <i class="fa fa-step-backward fa-2x"></i>
+                        </div>
+                        <div class="playpause-track" onclick="playpauseTrack()">
+                          <i class="fa fa-play-circle fa-4x"></i>
+                        </div>
+                        <div class="next-track" onclick="nextTrack()">
+                          <i class="fa fa-step-forward fa-2x"></i>
+                        </div>
+                      </div>
+                      
+                      <div class="slider_container">
+                        <div class="current-time">00:00</div>
+                        <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()" style="width: 800px;">
+                        <div class="total-duration">00:00</div>
+                      </div>
+                      
+                      
+                      <div class="slider_container">
+                        <i class="fa fa-volume-down"></i>
+                        <input type="range" min="1" max="100"
+                          value="99" class="volume_slider" onchange="setVolume()">
+                        <i class="fa fa-volume-up"></i>
+                      </div>
+                    </div>      
+                  </div>           
+
+            <div class="column middle">
+                <div class="songlist">
+                    <br><br>
+                        <div class="songItem" >
+                            <img src="https://www.levelman.com/content/images/2023/07/theweeknd_mydearmelanchoy_d2cs.jpg" alt="1">
+                            <span>Call Out My Name</span>
+                            <span class="songlistplay"><span class="timestamp">03:48  <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>We found each other <br>I helped you out of a broken place <br>You gave me comfort <br>But falling for you was my mistake <br> <br>I put you on top, I put you on top <br>I claimed you so proud and openly <br>And when times were rough, when times were rough <br>I made sure I held you close to me <br> <br>So call out my name (call out my name) <br>Call out my name when I kiss you so gently <br>I want you to stay (want you to stay) <br>I want you to stay, even though you dont want me <br>Girl, why cant you wait? (Why cant you wait, baby?) <br>Girl, why cant you wait til I fall out of love? <br>Wont you call out my name? (Call out my name) <br>Girl, call out my name, and Ill be on my way and <br>Ill be on my <br> <br>I said I didnt feel nothing, baby, but I lied <br>I almost cut a piece of myself for your life <br>Guess I was just another pit stop <br>Til you made up your mind <br>You just wasted my time <br> <br>You were on top, I put you on top <br>I claimed you so proud and openly, babe <br>And when times were rough, when times were rough <br>I made sure I held you close to me! <br> <br>So call out my name (call out my name, baby) <br>So call out my name when I kiss you <br>So gently, oh, I want you to stay (I want you to stay) <br>I want you to stay even though you dont want me <br>Girl, why cant you wait? (Girl, why cant you wait til I?) <br>Girl, why cant you wait til I fall out of loving? <br>Babe, call out my name (say call out my name, baby) <br>Girl, call out my name, and Ill be on my way <br>And Ill be on my <br> <br>On my way, on my way <br>On my way, on my way, ooh <br>On my way, on my way, on my way <br>On my way, on my way, on my way <br>(On my)')"></i>
+                              <audio id="a1"><source src="C:\Users\dell\Desktop\Sanchia\project\audios\mydear\1.mp3" type="audio/mpeg"></audio>
+                             </span></span>
+                        </div>
+                        <div class="songItem" >
+                            <img src="https://www.levelman.com/content/images/2023/07/theweeknd_mydearmelanchoy_d2cs.jpg" alt="1">
+                            <span>Try Me </span>
+                            <span class="songlistplay"><span class="timestamp"> 03:41  <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>Any time is the time<br>Any time for you to get my call, baby (so, baby)<br>Are you alone, baby?<br>If he aint around, pick up your phone, baby<br>Whoa<br><br>Can you try me? (try me), try me (try me)<br>Once you put your pride aside<br>You can notify me (-fy me), -fy me (-fy me)<br>Youre the best I ever had<br>Baby girl, remind me (-mind me), -mind me (-mind me)<br>Let me know if its on<br>And you know where to find me, find me<br>Havin thoughts you never had, yeah<br><br>I didnt know you were down for him finding out<br>I thought you had some kind of love for your man<br>Well, Im not tryna break up something<br>Youve been workin out, youve been steady<br>But Im ready to go all the way if you let me<br>Dont you tempt me<br>Youre lookin grown since the last time I looked at you<br>It might have been, been about a couple months<br>But I just got the picture that you texted to me<br>You aint steady, you look ready to go all the way<br>If you let me take you down on me<br><br>Can you try me? (try me), try me (ooh)<br>Once you put your pride aside (once you put your pride aside)<br>You can notify me (-fy me), -fy me (-fy me)<br>Youre the best I ever had (youre the best I ever had)<br>Baby girl, remind me (-mind me), -mind me (-mind me)<br>Let me know if its on (let me know)<br>And you know where to find me, find me (Hey)<br>Havin thoughts you never had, yeah<br>Can you try me? Try me, try me (Hey)<br>Once you put your pride aside<br>You can notify me, -fy me<br>Youre the best I ever had (youre the best I ever had)<br>Baby girl, remind me, -mind me (Hey)<br>Lemme know if its on (let me know)<br>And you know where to find me (hey) (find me), find me (hey) (find me)<br>Having thoughts you never had, yeah<br><br>Oh, lo<br>Lo-lo-lo-lo-lo-lo<br>Lo-lo-lo-lo-lo, lo-lo-lo<br>Lo-lo-lo-lo-lo-lo<br>Better try me<br><br>Dont you miss me, babe?<br>Dont you miss me, baby?<br>The way I kissed your scars<br>The way I fixed your heart, oh<br>Dont you miss me, babe?<br>Dont you miss me, baby?')"></i>
+                              <audio id="a2"><source src="C:\Users\dell\Desktop\Sanchia\project\audios\mydear\2.mp3" type="audio/mpeg"></audio>
+                      </span></span>
+                        </div>
+                        <div class="songItem" >
+                            <img src="https://www.levelman.com/content/images/2023/07/theweeknd_mydearmelanchoy_d2cs.jpg" alt="1">
+                            <span>Wasted Times </span>
+                            <span class="songlistplay"><span class="timestamp">03:41  <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>Wasted times I spent with someone else <br>She wasnt even half of you <br>Reminiscin how you felt <br>Reminiscin how you felt <br>And even though you put my life through hell <br>I cant seem to forget bout you, bout you <br>I want you to myself <br> <br>And now Im askin, who do you belong to now? <br>Who you give that love to now? <br>Who you pullin up on? <br>Who you gettin sprung for now? <br>And what they got that I aint got? Cause I got a lot <br>Dont make me run up on em, got me blowin up their spot <br>Cause I aint got no business catchin feelings anyway <br>I aint got no business catchin feelings <br> <br>Catchin feelings <br>These girls only want you when youre winnin (winnin) <br>But youve been with me from the beginnin (ooh, yeah, yeah) <br>And I know right now that were not talkin (not talkin) <br>I hope you know this dick is still an option <br>Cause Ill beat it up (Ill beat it up, yeah) <br>I took my time to learn the way your body functions <br>You were equestrian, so ride it like a champion (ride it baby) <br>This sex will get you high without no other substance <br> <br>So who do you belong to now? (Who do you belong to now?) <br>Who you give that love to now? (Who you give that love to now?) <br>Who you pullin up on? <br>Who you gettin sprung for now? (Who you gettin sprung for now?) <br>And what they got that I aint got? Cause I got a lot (I got a lot) <br>Dont make me run up on em, got me blowin up their spot (blowin up their spot) <br>Cause I aint got no business catchin feelings anyway <br>I aint got no business catchin feelings (feelings) <br> <br>Catchin feelings <br>I aint got no business catchin feelings <br>I aint got no business catchin feelings <br>Catchin fee-fee-fee-fee <br>Feelings <br>I aint got no business catchin feelings <br>I aint got no business catchin feelings <br>Catchin fee-fee-fee-fee <br> <br>Wake up <br>I dont wanna wake up <br>I dont wanna wake up <br>If you aint layin next to me <br>I dont wanna wake up <br>I dont wanna wake up <br>I dont wanna wake up <br>If you aint layin next to me-e-e <br>On me, me, on me, oh, I <br>On me, on me, on me')"></i>
+                              <audio id="a3"><source src="C:\Users\dell\Desktop\Sanchia\project\audios\mydear\3.mp3" type="audio/mpeg"></audio>
+                      </span></span>
+                        </div>
+                        <div class="songItem" >
+                            <img src="https://www.levelman.com/content/images/2023/07/theweeknd_mydearmelanchoy_d2cs.jpg" alt="1">
+                            <span>I Was Never There </span>
+                            <span class="songlistplay"><span class="timestamp">04:01   <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>What makes a grown man wanna cry? <br>(Cry, cry, cry, cry) <br>What makes him wanna take his life? <br>(Yeah) <br>His happiness is never real <br>(Real, real, real, real) <br>And mindless sex is how he feels, ooh, he heals <br> <br>When its time, when its time, when its time <br>It wont matter (it dont matter) <br>It wont matter (matter) <br>When its time, when its time, when its time (time, its time, babe) <br>It wont matter (it wont matter, babe) <br>It wont matter (ya) <br>It was like he was never there <br>(It was like he was never there) <br>It was like he was gone in thin air, oh <br>When its time, when its time, when its time, oh, baby <br>It wont matter (It wont matter, baby) <br>It wont matter <br> <br>When its time, when its time, when its time <br>It wont matter <br>It wont matter <br>When its time, when its time, when its time <br>It wont matter <br>It wont matter <br>It was like he was never there <br>It was like he was gone in thin air <br>When its time, when its time, when its time <br>It wont matter, it wont matter <br> <br>When its time, when its time, when its time <br>It wont matter, it wont matter <br>When its time, when its time, when its time <br>It wont matter, it wont matter <br> <br>Ooh, now I know what love is <br>And I know it aint you for sure <br>Youd rather something toxic <br>So, I poison myself again, again <br>Til I feel nothing <br>In my soul (in my soul) <br>Im on the edge of something breaking <br>I feel my mind is slowly fading <br>If I keep going, I wont make it <br>If I keep going, I wont make it <br> <br>And its all because of you <br>Its all because of you <br>Its all because of you <br>Its all because of you <br>Whoa, whoa <br>Dont you, baby, hey <br>It wont matter, baby <br>Dont you know? <br>Dont you know? <br>Oh, ooh, oh <br>Hey!')"></i>
+                              <audio id="a4"><source src="C:\Users\dell\Desktop\Sanchia\project\audios\mydear\4.mp3" type="audio/mpeg"></audio>
+                      </span></span>
+                        </div>
+                        <div class="songItem" >
+                            <img src="https://www.levelman.com/content/images/2023/07/theweeknd_mydearmelanchoy_d2cs.jpg" alt="1">
+                            <span>Hurt You </span>
+                            <span class="songlistplay"><span class="timestamp">  03:50 <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>And now I know relationships my enemy <br>So stay away from me <br>Im warning you <br>You try to fill the void with every man you meet <br>Cause youre upset with me <br>Im warning you <br> <br>Cause all the nights you slept alone dryin your eyes <br>And all the nights you thought about takin your life <br>Cause if its love you want again, dont waste your time <br>But if you call me up, Im fuckin you on sight <br> <br>I dont wanna hurt you (ooh) <br>I dont wanna hurt you <br>I dont wanna hurt you (ooh) <br>I dont wanna hurt you <br> <br>When youre with him, you close your eyes and think of me <br>Just call me up again <br>Ill make you weak <br>Girl, Ill come to put myself between your legs <br>Not between your heart <br>Cant you see? <br> <br>That all the nights you slept alone, dryin your eyes (cause of me, baby) <br>And all the nights you thought about takin your life (cause of me, baby) <br>If its love you want again, dont waste your time (dont you waste) <br>But if you call me up, Im fuckin you on sight <br> <br>I dont wanna hurt you (ooh) <br>I dont wanna hurt you <br>I dont wanna hurt you (ooh) <br>I dont wanna hurt you <br>I dont wanna hurt you (ooh) <br>I dont wanna hurt you <br>I dont wanna hurt you (ooh) <br>I dont wanna hurt you <br> <br>I dont want <br>I dont want <br>I dont want <br>I dont want <br>I dont wanna, baby <br>I dont wanna, baby <br>I dont, ooh')"></i>
+                              <audio id="a5"><source src="C:\Users\dell\Desktop\Sanchia\project\audios\mydear\5.mp3" type="audio/mpeg"></audio>
+                      </span></span>
+                        </div>
+                        <div class="songItem" >
+                            <img src="https://www.levelman.com/content/images/2023/07/theweeknd_mydearmelanchoy_d2cs.jpg" alt="1">
+                            <span>Privilege </span>
+                            <span class="songlistplay"><span class="timestamp">  02:50 <i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>Enjoy your privileged life<br>Cause Im not gonna hold you through the night<br>We said our last goodbyes<br>So, lets just try to end it with a smile<br><br>And I dont wanna hear that you are suffering<br>You are suffering no more<br>Cause I held you down when you were suffering<br>You were suffering<br><br>Blues away, way, way<br>I got two red pills to take the blues away<br>Blues away, way, way<br>I got two red pills to take the blues away<br><br>And Ima fuck the pain away, and I know Ill be okay<br>They said our love is just a game, I dont care what they say<br>But Ima drink the pain away, Ill be back to my old ways<br>And I got two red pills to take the blues away, oh<br><br>I dont wanna hear that no more, no more<br>No more, no more<br>I dont wanna hear that no more')"></i>
+                              <audio id="a6"><source src="C:\Users\dell\Desktop\Sanchia\project\audios\mydear\6.mp3" type="audio/mpeg"></audio>
+                      </span></span>
+                        </div>
+                </div> 
+            </div>
+
+            <div class="column side">
+              <div class="rightbar" id="right-column" style="overflow-y: auto; text-align: center;">
+                 <div class="card">
+                  <h2 style="text-align:center;color: blanchedalmond;"><img src="https://www.interviewmagazine.com/wp-content/uploads/2023/04/ERL_INTERVIEW_WEEKND-8-1-scaled.jpg" width="140px">The Weeknd </h2>
+                  <p>The Weeknd, a Canadian singer, and songwriter, born Abel Makkonen Tesfaye, gained international acclaim for his distinct R&B and pop fusion. His chart-topping hits, such as "Blinding Lights" and "Can't Feel My Face," showcase his smooth vocals and innovative sound. The Weeknd has garnered multiple awards, solidifying his status as a music industry heavyweight.</p>
+                 </div>  
+              </div> 
+            </div>
+        </div>      
+
+
+        <script>
+          function changeRightColumnContent(content) {
+            document.getElementById('right-column').innerHTML = content;
+          }
+        </script>
+        <script>
+          let now_playing = document.querySelector(".now-playing");
+          let track_art = document.querySelector(".track-art");
+          let track_name = document.querySelector(".track-name");
+          let track_artist = document.querySelector(".track-artist");
+
+          let playpause_btn = document.querySelector(".playpause-track");
+          let next_btn = document.querySelector(".next-track");
+          let prev_btn = document.querySelector(".prev-track");
+
+          let seek_slider = document.querySelector(".seek_slider");
+          let volume_slider = document.querySelector(".volume_slider");
+          let curr_time = document.querySelector(".current-time");
+          let total_duration = document.querySelector(".total-duration");
+
+          let track_index = 0;
+          let isPlaying = false;
+          let updateTimer;
+
+          // Create new audio element
+          let curr_track = document.createElement('audio');
+          console.log("fhh")
+          // Define the tracks that have to be played
+          let track_list = [
+            {
+              name: "Call out my name",
+              artist: "The Weeknd",
+              image: "https://www.levelman.com/content/images/2023/07/theweeknd_mydearmelanchoy_d2cs.jpg",
+              path: "C:\\Users\\dell\\Desktop\\Sanchia\\project\\audios\\mydear\\1.mp3"
+            },
+            {
+              name: "Try me",
+              artist: "The Weeknd",
+              image: "https://www.levelman.com/content/images/2023/07/theweeknd_mydearmelanchoy_d2cs.jpg",
+              path: "C:\\Users\\dell\\Desktop\\Sanchia\\project\\audios\\mydear\\2.mp3"
+            },
+            {
+              name: "Wasted times",
+              artist: "The Weeknd",
+              image: "https://www.levelman.com/content/images/2023/07/theweeknd_mydearmelanchoy_d2cs.jpg",
+              path: "C:\\Users\\dell\\Desktop\\Sanchia\\project\\audios\\mydear\\3.mp3"
+            },
+            {
+              name: "I was never there",
+              artist: "The Weeknd",
+              image: "https://www.levelman.com/content/images/2023/07/theweeknd_mydearmelanchoy_d2cs.jpg",
+              path: "C:\\Users\\dell\\Desktop\\Sanchia\\project\\audios\\mydear\\4.mp3"
+            },
+            {
+              name: "Hurt You",
+              artist: "The Weeknd",
+              image: "https://www.levelman.com/content/images/2023/07/theweeknd_mydearmelanchoy_d2cs.jpg",
+              path: "C:\\Users\\dell\\Desktop\\Sanchia\\project\\audios\\mydear\\5.mp3"
+            },
+            {
+              name: "Privilege",
+              artist: "The Weeknd",
+              image: "https://www.levelman.com/content/images/2023/07/theweeknd_mydearmelanchoy_d2cs.jpg",
+              path: "C:\\Users\\dell\\Desktop\\Sanchia\\project\\audios\\mydear\\6.mp3"
+            },
+            ];
+
+          function loadTrack(track_index) {
+            clearInterval(updateTimer);
+            resetValues();
+            curr_track.src = track_list[track_index].path;
+            curr_track.load();
+
+            track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
+            track_name.textContent = track_list[track_index].name;
+            track_artist.textContent = track_list[track_index].artist;
+            now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
+
+            updateTimer = setInterval(seekUpdate, 1000);
+            curr_track.addEventListener("ended", nextTrack);
+          }
+
+          function resetValues() {
+            curr_time.textContent = "00:00";
+            total_duration.textContent = "00:00";
+            seek_slider.value = 0;
+          }
+
+          // Load the first track in the tracklist
+          loadTrack(track_index);
+
+          function playpauseTrack() {
+            if (!isPlaying) playTrack();
+            else pauseTrack();
+          }
+
+          function playTrack() {
+            curr_track.play();
+            isPlaying = true;
+            playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-4x"></i>';
+          }
+
+          function pauseTrack() {
+            curr_track.pause();
+            isPlaying = false;
+            playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-4x"></i>';;
+          }
+
+          function nextTrack() {
+            if (track_index < track_list.length - 1)
+              track_index += 1;
+            else track_index = 0;
+            loadTrack(track_index);
+            playTrack();
+          }
+
+          function prevTrack() {
+            if (track_index > 0)
+              track_index -= 1;
+            else track_index = track_list.length;
+            loadTrack(track_index);
+            playTrack();
+          }
+
+          function seekTo() {
+            let seekto = curr_track.duration * (seek_slider.value / 100);
+            curr_track.currentTime = seekto;
+          }
+
+          function setVolume() {
+            curr_track.volume = volume_slider.value / 100;
+          }
+
+          function seekUpdate() {
+            let seekPosition = 0;
+
+            if (!isNaN(curr_track.duration)) {
+              seekPosition = curr_track.currentTime * (100 / curr_track.duration);
+
+              seek_slider.value = seekPosition;
+
+              let currentMinutes = Math.floor(curr_track.currentTime / 60);
+              let currentSeconds = Math.floor(curr_track.currentTime - currentMinutes * 60);
+              let durationMinutes = Math.floor(curr_track.duration / 60);
+              let durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
+
+              if (currentSeconds < 10) { currentSeconds = "0" + currentSeconds; }
+              if (durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
+              if (currentMinutes < 10) { currentMinutes = "0" + currentMinutes; }
+              if (durationMinutes < 10) { durationMinutes = "0" + durationMinutes; }
+
+              curr_time.textContent = currentMinutes + ":" + currentSeconds;
+              total_duration.textContent = durationMinutes + ":" + durationSeconds;
+            }
+          }
+         </script>
+</body>
+</html>
+
+
+
+
+
+

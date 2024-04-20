@@ -1,0 +1,594 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Varela+Round&display=swap');
+
+.header{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    z-index: 10;
+    align-items: center;
+    justify-content: space-between;
+    padding: .8rem;
+    background: #120d0d;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.navibar {
+    float: right; 
+}
+
+.navibar i {
+    color: rgb(253, 254, 253);
+    font-size: 50px;
+}
+.navibar i:hover{
+    color: rgb(53, 176, 53);   
+}
+
+.navibar a {
+    font-size: 1rem;
+    color: #eee;
+    text-decoration: none;
+    margin: 0 5px;
+    font-family: 'Agbalumo', sans-serif;
+}
+
+.navibar a:hover {
+    color: rgb(53, 176, 53);
+}
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #414040;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: rgb(222, 218, 218);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: url(https://images.pond5.com/starry-night-sky-twinkling-stars-footage-098653571_iconl.jpeg);
+    background-color: #333;
+    color: #fff;
+}
+  
+    .sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #120d0d;
+    padding: 20px;
+    padding-top: 90px;
+    float: left;
+    left: 0%; top: 0%;
+    position: fixed;
+    display: flexbox;
+    flex-direction: column;
+}
+
+
+.song-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.song-artist {
+    font-size: 14px;
+    color: #ccc;
+}
+
+
+
+ div.gallery1 {
+    margin-top: 2%;
+    border: 1px solid #ccc;
+    float: left;
+    max-width: 170px;
+    margin-right: 2%;
+    width: 90%;
+  }
+  
+  div.gallery1:hover {
+    border: 1px solid #777;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgb(53, 176, 53);
+  }
+  
+  div.gallery1 img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .card {
+    background-color: rgb(23, 23, 23);
+    padding: 1px 20px;
+    margin-top: 20px;
+  }
+.card i:hover{
+  color: rgb(53, 176, 53) ;
+}
+
+  .column {
+    float: left;
+    padding: 10px;
+  }
+  
+  
+.column.side {
+    width: 18%;
+  }
+  
+
+  .column.middle {
+    width: 67%;
+  } 
+  
+  
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+    position: relative;
+  }
+  
+  .card i{
+    cursor: pointer;
+  }
+  .song h3, .song p{
+    cursor: pointer;
+  }
+  .song h3{
+    line-height: 4px;
+  } 
+
+.rightbar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background-color: #120d0d;
+  padding: 20px;
+  padding-top: 20px;
+  float: right;
+  right: 0; top: 0%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.details {
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+margin-top: 25px;
+}
+
+.track-art {
+margin: 25px;
+height: 150px;
+width: 150px;
+background-image: url("https://www.levelman.com/content/images/2023/07/theweeknd_mydearmelanchoy_d2cs.jpg");
+background-size: cover;
+border-radius: 15%;
+}
+
+.now-playing {
+font-size: 1rem;
+}
+
+.track-name {
+font-size: 1.5rem;
+}
+
+.track-artist {
+font-size: 1.3rem;
+}
+
+.buttons {
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+.playpause-track, .prev-track, .next-track {
+padding: 25px;
+opacity: 0.8;
+
+
+transition: opacity .2s;
+}
+
+.playpause-track:hover, .prev-track:hover, .next-track:hover {
+opacity: 1.0;
+}
+
+.slider_container {
+  width: 75%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.seek_slider, .volume_slider {
+  width: 80%; 
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+
+
+
+
+.seek_slider:hover, .volume_slider:hover {
+opacity: 1.0;
+}
+
+.seek_slider {
+width: 60%;
+}
+
+.volume_slider {
+width: 30%;
+}
+
+.current-time, .total-duration {
+padding: 10px;
+}
+
+i.fa-volume-down, i.fa-volume-up {
+padding: 10px;
+}
+i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
+cursor: pointer;
+}
+
+i.fa-step-forward:hover, i.fa-step-backward:hover {
+  cursor: pointer;
+  color: rgba(136, 168, 82, 0.923);
+  }
+
+
+@media only screen and (max-width: 700px) {
+  .column.side,
+  .rightbar {
+    display: none;
+  }
+
+  .column.middle {
+    width: 100%;
+  }
+
+ 
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .rightbar {
+    width: 100%;
+    height: auto;
+    position: static;
+    float: none;
+  }
+
+  .navigation,
+  .rightbar {
+    padding: 10px;
+  }
+
+  .navibar {
+    float: none;
+    text-align: center;
+  }
+
+  .navibar i {
+    margin-right: 0;
+  }
+
+  .dropdown-content {
+    width: 100%;
+  }
+
+  .gallery1 {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+ */
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Varela+Round&display=swap');
+
+.header{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5% 1rem 0%;
+    background: #120d0d;
+    z-index: 1;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.navibar {
+    float: right;
+    position: relative;; 
+}
+
+.navibar i {
+    color: rgb(253, 254, 253);
+    font-size: 30px;
+}
+.navibar i:hover{
+    color: rgb(53, 176, 53);   
+}
+
+.navibar a {
+    font-size: 1rem;
+    color: #eee;
+    text-decoration: none;
+    margin: 0 5px;
+    font-family: 'Agbalumo', sans-serif;
+}
+
+.navibar a:hover {
+    color: rgb(53, 176, 53);
+}
+.dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #414040;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    color: rgb(222, 218, 218);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+}
+
+
+.sidebar {
+    width: 250px;
+    height: 600%;
+    background-color: #120d0d;
+    padding: 20px;
+    padding-top: 50px;
+    float: left;
+    left: 0%;
+    position: fixed;
+}
+.song-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.song-artist {
+    font-size: 14px;
+    color: #ccc;
+}
+
+  .card {
+    background-color: rgb(23, 23, 23);
+    padding: 4px 20px;
+    margin-top: 10px;
+  }
+
+  
+
+  .column {
+    float: left;
+    padding: 10px;
+  }
+  
+  /* Left and right column */
+  .column.side {
+    width: 18%;
+  }
+  
+  /* Middle column */
+  .column.middle {
+    width: 64%;
+  }
+  
+  /* Clear floats after the columns */
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+    position: relative;
+  }
+
+.songlist{
+    margin-left: 5%;
+}
+.songItem{
+    display: flex;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.493);
+    width: 90%;
+    color:black;
+    margin: 12px 2px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+    font-size: 15px;
+}
+.songItem i{
+  font-size: 23px;
+}
+.songItem img{
+    width: 43px;
+    margin: 0 23px ;
+}
+.timestamp{
+    margin: 0 23px;
+}
+i:hover{
+    cursor: pointer;
+}
+.rightbar {
+    position: absolute;
+    width: 200px;
+    height: 92%;
+    background-color: #120d0d;
+    padding: 20px;
+    padding-top: 20px;
+    float: right;
+    right: 0; top: 8%;
+    display: flexbox;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 25px;
+  }
+  
+  .track-art {
+  margin: 25px;
+  height: 150px;
+  width: 150px;
+  background-image: url("https://images.pexels.com/photos/262034/pexels-photo-262034.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-size: cover;
+  border-radius: 15%;
+  }
+  
+  .now-playing {
+  font-size: 1rem;
+  }
+  
+  .track-name {
+  font-size: 1.5rem;
+  }
+  
+  .track-artist {
+  font-size: 1.3rem;
+  }
+  
+  .buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  }
+  
+  .playpause-track, .prev-track, .next-track {
+  padding: 25px;
+  opacity: 0.8;
+  margin-left: 2%;
+  
+  /* Smoothly transition the opacity */
+  transition: opacity .2s;
+  }
+  
+  .playpause-track:hover, .prev-track:hover, .next-track:hover {
+  opacity: 1.0;
+  }
+  
+  .slider_container {
+  width: 75%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+  }
+  
+  /* Modify the appearance of the slider */
+  .seek_slider, .volume_slider {
+  height: 5px;
+  background: black;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  }
+  
+  /* Modify the appearance of the slider thumb */
+  .seek_slider::-webkit-slider-thumb, .volume_slider::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+  }
+  
+  .seek_slider:hover, .volume_slider:hover {
+  opacity: 1.0;
+  }
+  
+  .seek_slider {
+  width: 60%;
+  }
+  
+  .volume_slider {
+  width: 30%;
+  }
+  
+  .current-time, .total-duration {
+  padding: 10px;
+  }
+  
+  i.fa-volume-down, i.fa-volume-up {
+  padding: 10px;
+  }
+  i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
+  cursor: pointer;
+  }
+  
+  
