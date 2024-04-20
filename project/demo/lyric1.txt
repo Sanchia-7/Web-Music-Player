@@ -1,1 +1,0 @@
-<i class="fa-solid fa-pen-fancy" onclick="changeRightColumnContent('LYRICS:<br><br>')"></i>
