@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-image: url('https://img.freepik.com/premium-photo/black-green-gradient-watercolor-abstract-photo-color-background_640734-113.jpg');
+            background-size: cover;
+            font-family: 'Tisa', sans-serif;
+        }
+
+        .container {
+            width: 400px;
+            height: 300px;
+            margin: 100px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 50px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        label {
+            margin-left:15% ;
+            font-size: 18px;
+        }
+
+        input {
+            margin-left: 2%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
+        button {
+            margin-left: 40%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1e4420;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            input {
+                margin-bottom: 5px;
+            }
+
+            button {
+                margin-left: 30%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>USER LOGIN</h1>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required placeholder="enter username"><br>
+
+        <label for="password">Password :</label>
+        <input type="password" id="password" name="password" required placeholder="enter password"><br>
+
+        <button onclick="login()">Login</button>
+
+        <div class="signup-link">
+            <a href="#" onclick="signup()">Dont have an account?<br>Create account</a>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "sanchia7" && password === "123456789") {
+                window.location.href = "file:///C:/Users/dell/Desktop/Sanchia/project/san_player.html";
+            } else {
+                alert("Login failed. Incorrect username or password.");
+            }
+        }
+        function signup() {
+            alert("Redirect to signup page");
+        }
+    </script>
+
+</body>
+</html>
